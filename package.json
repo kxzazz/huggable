@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint . --ext .ts,.ts",
+    "lint:fix": "bun lint --fix",
+    "format:check": "bunx prettier '**/*.{cjs,mjs,ts,tsx,json}' --ignore-path ./.gitignore --ignore-unknown --check",
+    "format": "bunx prettier '**/*.{cjs,mjs,ts,tsx,json}' --ignore-unknown ./.gitignore --write"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
